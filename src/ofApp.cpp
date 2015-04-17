@@ -49,9 +49,6 @@ void ofApp::setup(){
     pspr.createPass<SSAOPass>()->setEnabled(false);
     pspr.createPass<ZoomBlurPass>()->setEnabled(false);
     
-    // list-up all audio devices that are available for video recording
-    cap.listAudioDevices();
-    
     // setup parameters
     bDrawAurora = false;
     bDrawWave = false;
@@ -245,15 +242,6 @@ void ofApp::keyReleased(int key){
     }
     if (key == 'u') {
         pspr[6]->setEnabled(false);
-    }
-    
-    // start/stop video recording
-    if (key == ' ') {
-        if (!cap.isRecording()) {
-            cap.startRecordingWithAudioDevice(1, "test.mov", 60.0);
-        } else {
-            cap.stopRecording();
-        }
     }
 }
 

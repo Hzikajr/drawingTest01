@@ -3,7 +3,6 @@
 #include "ofMain.h"
 #include "ofxTrueTypeFontUC.h"
 #include "ofxPostProcessing.h"
-#include "ofxAVScreenCapture.h"
 #include "ofxTriangle.h"
 
 //#define DEBUG_MODE
@@ -391,9 +390,6 @@ class ofApp : public ofBaseApp{
     
     // visual effect
     ofxPostProcessing   pspr;
-    
-    // video capturing addon
-    ofxAVScreenCapture  cap;
     
     // params
     float       rot;
